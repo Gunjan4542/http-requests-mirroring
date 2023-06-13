@@ -232,6 +232,7 @@ func main() {
 	for {
 		select {
 		case packet := <-packets:
+			log.Println("Something arrived.")
 			// A nil packet indicates the end of a pcap file.
 			if packet == nil {
 				return
